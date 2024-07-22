@@ -1,0 +1,258 @@
+header{
+    background: $fon;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $fon;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        color:$white-text;
+        cursor: pointer;
+        &__name{
+            font-family: Work Sans;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;            
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        color: $white-text;
+
+        &__links {
+            color: $white-text;
+            font-family: Work Sans;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+        }
+
+        &__btn {
+            @include daj;
+            @include btn;
+            background-color: $btn-color; 
+            color: $white-text;
+            cursor: pointer;
+            color: $white-text;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+            img {
+                height: auto;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__toggle {
+        display: none;
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        color: $white-text;
+        cursor: pointer;
+
+        @media (max-width: 834px) {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: $fon;
+        z-index: 1;
+    }
+
+    .navbar__menu.active {
+        display: flex;
+    }
+
+    .navbar__menu__items {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar__menu__btn {
+        width: 100%;
+        justify-content: center;
+        border-radius: 0;
+    }
+}
+
+.discover{
+    margin-top:80px ;
+    padding-bottom: 80px;
+    color: $white-text;
+    @include daj;
+    column-gap:50px;
+    &__footer{
+        display: none;
+    }
+    &__texts{
+        max-width: 510px;        
+        width: 100%;
+        &__title{
+            font-family: Work Sans;
+            font-size: 7vw;
+            font-weight: 600;
+            line-height: 7vw;
+        }
+        &__tex{
+            margin-top: 20px;
+            font-family: Work Sans;
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 35.2px;
+        }
+        &__footer{
+            margin-top: 30px;
+            &__btn{
+                @include daj;
+                @include btn;
+                padding: 19px 50px;
+                column-gap:12px;
+            }
+            &__menu{
+                margin-top: 30px;
+                @include daj;
+                font-family: Space Mono;
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 39.2px;
+            }
+        }
+    }
+    &__placeholder{
+        &__img{
+            max-width: 510px;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+        &__space{
+                background-color: #3B3B3B;
+                border-radius: 0px 0px 20px 20px;
+                padding: 2vw;
+            &__title{
+                font-family: Work Sans;
+                font-size: 2vw;
+                font-weight: 600;
+                line-height: 4vw;
+            }
+            &__avatar{
+                margin-top: 1vw;
+                @include daj;
+                justify-content: start;
+                column-gap:12px;
+                &__code{
+                    font-size: 1vw;
+                }
+            }
+        }
+
+    }
+}
+@media (max-width:834px) {
+    .discover{
+        padding: 0px 50px 80px 50px;
+        &__texts{
+            max-width: 330px;
+            width: 100%;
+            &__title{
+                font-size: 45px;
+                line-height: 45.6px;
+            }
+            &__tex{
+                font-size: 20px;
+                line-height: 22.4px;
+            }
+            &__footer{
+                &__menu{
+                    font-size: 22px;
+                    line-height: 35.2px;
+                }
+            }
+        }
+        &__placeholder{
+            &__img{
+                max-width: 330px;
+                width: 100%;
+            }
+            &__space{
+                border-radius: 0px 0px 20px 20px;
+                &__title{
+                    font-size: 22px;
+                    line-height: 30.8px;
+                }
+                &__avatar{
+                    &__code{
+                        font-size: 16px;
+                        line-height: 22.4px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:700px) {
+    .discover{
+        padding: 0px 20px 80px 20px;
+        display: flex;
+        flex-direction: column;
+        &__footer{
+            display: block;
+        }
+        &__texts{
+            &__title{
+                font-size: 28px;
+                line-height: 39.2px;
+            }
+            &__tex{
+                font-size: 16px;
+                line-height: 22.4px;
+                margin-top: 10px;
+            }
+            &__footer{
+                display: none;
+            }
+        }
+        &__placeholder{
+            &__img{
+                margin-top: 40px;
+            }
+        }
+        &__footer{
+            margin-top: 40px;
+            &__btn{
+                @include daj;
+                @include btn;
+                padding: 19px 110px;
+                column-gap:12px;
+            }
+            &__menu{
+                margin-top: 30px;
+                @include daj;
+                font-family: Space Mono;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 35.2px;
+            }
+        }
+    }
+}

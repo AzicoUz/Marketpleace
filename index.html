@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketpleace</title>
-  </head>
-  <body>
-    <header></header>
-    <main>
-      <section>Hayrulloh</section>
-    </main>
-    <footer></footer>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container-nav">
+                <div class="navbar">
+                    <div class="navbar__logo" id="navbarLogo">
+                        <img class="navbar__logo__img" src="./img/logo/Storefront.png" alt="Storefront Logo">
+                        <code class="navbar__logo__name">NFT Marketplace</code>
+                    </div>
+                    <button class="navbar__toggle" id="navbarToggle"><img src="./img/logo/Burger Menu.png" alt="#"></button>
+                    <ul class="navbar__menu" id="navbarMenu">
+                        <li class="navbar__menu__items"><a class="navbar__menu__links" href="#">Marketplace</a></li>
+                        <li class="navbar__menu__items"><a class="navbar__menu__links" href="#">Rankings</a></li>
+                        <li class="navbar__menu__items"><a class="navbar__menu__links" href="#">Connect a wallet</a></li>
+                        <button class="navbar__menu__btn"><img src="./img/logo/User.png" alt="User Icon"> Sign Up</button>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+        <div class="hero">
+            <div class="container">
+                <div class="discover">
+                    <div class="discover__texts">
+                        <h1 class="discover__texts__title">
+                            Discover digital art & Collect NFTs
+                        </h1>
+                        <p class="discover__texts__tex">
+                            NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
+                        </p>
+                        <div class="discover__texts__footer">
+                            <button class="discover__texts__footer__btn"><img src="./img/logo/RocketLaunch.png" alt="#"> Get Started</button>
+                            <ul class="discover__texts__footer__menu">
+                               <li class="discover__texts__footer__menu__items">240k+ <br> Total Sale</li>
+                               <li class="discover__texts__footer__menu__items">100k+ <br> Auctions</li>
+                               <li class="discover__texts__footer__menu__items">240k+ <br> Artists</li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="discover__placeholdr">
+                        <img class="discover__placeholder__img" src="./img/Image Placeholder.jpg" alt="#">
+                        <div class="discover__placeholder__space">
+                            <h3 class="discover__placeholder__space__title">Space Walking</h3>
+                            <div class="discover__placeholder__space__avatar">
+                                <img class="discover__placeholder__space__avatar__img" src="./img/Avatar Placeholder.png" alt="#">
+                                <code class="discover__placeholder__space__avatar__code">Animakid</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discover__footer">
+                        <button class="discover__footer__btn"><img src="./img/logo/RocketLaunch.png" alt="#"> Get Started</button>
+                        <ul class="discover__footer__menu">
+                           <li class="discover__footer__menu__items">240k+ <br> Total Sale</li>
+                           <li class="discover__footer__menu__items">100k+ <br> Auctions</li>
+                           <li class="discover__footer__menu__items">240k+ <br> Artists</li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+        document.getElementById('navbarMenu').classList.toggle('active');
+        });
+
+    </script>
+</body>
 </html>
